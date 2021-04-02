@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Add a border to your Instagram profile picture!</title>
+  <meta name="description" content="Add a border to your Instagram profile picture!">
+</head>
+
+<body>
+  <form>
+    <label for="instagram-url">Instagram Picture URL:</label>
+    <input type="url" id="instagram-url">
+    <input type="button" value="Generate" onclick="run()">
+  </form>
+  <div id="picture">
+    <canvas id="c1" width="320px" height="320px">
+    </canvas>
+    <canvas id="c2" width="320px" height="320px">
+    </canvas>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
