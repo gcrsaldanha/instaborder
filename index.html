@@ -8,17 +8,32 @@
 </head>
 
 <body>
-  <form>
+  <h1>Instaborder!</h1>
+
+  <div>
     <label for="instagram-url">Instagram Picture URL:</label>
-    <input type="url" id="instagram-url">
-    <input type="button" value="Generate" onclick="run()">
-  </form>
-  <div id="picture">
-    <canvas id="c1" width="320px" height="320px">
-    </canvas>
-    <canvas id="c2" width="320px" height="320px">
-    </canvas>
+    <input type="url" id="instagram-url" value="" autofocus onfocusout="run(this)">
+    <br>
+    <button onclick="run(this)">Generate</button>
   </div>
+
+  <div>
+    <div>
+      <h1>Picture with border</h1>
+      <div><canvas id="border-picture" width="320px" height="320px"></canvas></div>
+      <label for="color">Border color: </label><input type="color" id="color" value="#e66465" oninput="changeColor(this)">
+      <h2><a id="download-picture" download="ig-profile-picture.png" href="" onclick="downloadImg(this)">Download picture</a></h2>
+    </div>
+
+    <hr>
+
+    <div>
+      <h1>Original picture</h1>
+      <canvas id="original-picture" width="320px" height="320px"></canvas>
+      <h2><a id="download-original" download="original.png" href="" onclick="downloadOriginalImg(this)">Download original</a></h2>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 
